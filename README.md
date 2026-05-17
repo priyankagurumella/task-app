@@ -1,7 +1,7 @@
 # Task Management Application
 
 Live Demo:
-https://task-app-q1f8.onrender.com
+https://task-app-qlf8.onrender.com
 
 GitHub Repository:
-https://github.com/priyankagurumella/task-app
+https://priyankagurumella.github.io/task-app/
