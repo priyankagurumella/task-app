@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Auth Section -->
+  <div id="auth-section">
+    <div class="auth-box">
+      <h1>📝 Task Manager</h1>
+
+      <!-- Login Form -->
+      <div id="login-form">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email">
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p>No account? <span onclick="showRegister()">Register</span></p>
+        <p id="login-msg"></p>
+      </div>
+
+      <!-- Register Form -->
+      <div id="register-form" style="display:none">
+        <h2>Register</h2>
+        <input type="text" id="reg-name" placeholder="Your Name">
+        <input type="email" id="reg-email" placeholder="Email">
+        <input type="password" id="reg-password" placeholder="Password">
+        <button onclick="register()">Register</button>
+        <p>Have account? <span onclick="showLogin()">Login</span></p>
+        <p id="reg-msg"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard Section -->
+  <div id="dashboard" style="display:none">
+    <nav>
+      <h1>📝 Task Manager</h1>
+      <div>
+        <span id="user-name"></span>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Add Task -->
+      <div class="add-task">
+        <h2>Add New Task</h2>
+        <input type="text" id="task-title" placeholder="Task Title">
+        <textarea id="task-desc" placeholder="Task Description"></textarea>
+        <button onclick="addTask()">Add Task ➕</button>
+      </div>
+
+      <!-- Task Lists -->
+      <div class="task-boards">
+        <div class="board">
+          <h3>⏳ Pending</h3>
+          <div id="pending-tasks"></div>
+        </div>
+        <div class="board">
+          <h3>🔄 In Progress</h3>
+          <div id="progress-tasks"></div>
+        </div>
+        <div class="board">
+          <h3>✅ Completed</h3>
+          <div id="completed-tasks"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
